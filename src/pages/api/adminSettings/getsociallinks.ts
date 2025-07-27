@@ -7,13 +7,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   try {
-    const [rows]: any = await db.execute("SELECT socialLinks FROM adminsettings LIMIT 1");
+    const [rows]: any[] = await db.execute("SELECT socialLinks FROM adminsettings LIMIT 1");
 
-    if (!rows || rows.length === 0) {
+    // Log result for debugging
+    console.log("DB Result:", rows);
+
+    const row = Array.isArray(rows) && rows.length > 0 ? rows[0] : null;
+
+    if (!row) {
       return res.status(404).json({ error: true, message: "No Data Found" });
     }
 
-    const socialLinks = JSON.parse(rows[0].socialLinks || "{}");
+    const socialLinks = JSON.parse(row.socialLinks || "{}");
 
     return res.status(200).json({
       error: false,
