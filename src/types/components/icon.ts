@@ -4,3 +4,5 @@ export interface icons {
     stroke?: string,
     size?: string | Number
 }
+
+export default {};

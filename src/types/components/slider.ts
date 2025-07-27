@@ -9,3 +9,4 @@ export interface slider {
   className?:string;
   speed?:number;
 }
+export default {};
