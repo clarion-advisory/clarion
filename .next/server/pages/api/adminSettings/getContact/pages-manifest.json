@@ -1,0 +1,3 @@
+{
+  "/api/adminSettings/getContact": "pages/api/adminSettings/getContact.js"
+}

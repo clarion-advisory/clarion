@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Praveen%20Raj/Desktop/clarion/clarion/src/app/loading.tsx"],"sourcesContent":["'use client'\r\n\r\nimport { Bars } from 'react-loader-spinner'\r\n\r\nexport default function Loading() {\r\n    return (\r\n        <div className=\"w-full h-screen flex items-center justify-center bg-white\">\r\n            <Bars\r\n                height={80}\r\n                width={80}\r\n                color=\"#6699cc\"\r\n                ariaLabel=\"bars-loading\"\r\n                visible={true}\r\n            />\r\n        </div>\r\n    )\r\n}\r\n"],"names":[],"mappings":";;;;AAEA;AAFA;;;AAIe,SAAS;IACpB,qBACI,6LAAC;QAAI,WAAU;kBACX,cAAA,6LAAC,+JAAA,CAAA,OAAI;YACD,QAAQ;YACR,OAAO;YACP,OAAM;YACN,WAAU;YACV,SAAS;;;;;;;;;;;AAIzB;KAZwB","debugId":null}}]
+}

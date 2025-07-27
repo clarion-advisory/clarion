@@ -1,0 +1,10 @@
+{
+  "/api/adminSettings/getContact": "pages/api/adminSettings/getContact.js",
+  "/api/adminSettings/getgeneralsiteinfo": "pages/api/adminSettings/getgeneralsiteinfo.js",
+  "/api/adminSettings/getsociallinks": "pages/api/adminSettings/getsociallinks.js",
+  "/api/fetchtestimonails": "pages/api/fetchtestimonails.js",
+  "/api/homecomponents/gethomecomponents": "pages/api/homecomponents/gethomecomponents.js",
+  "/api/properties/getproperty": "pages/api/properties/getproperty.js",
+  "/api/propertySchema/getpropertyschema": "pages/api/propertySchema/getpropertyschema.js",
+  "/api/track-visitor": "pages/api/track-visitor.js"
+}

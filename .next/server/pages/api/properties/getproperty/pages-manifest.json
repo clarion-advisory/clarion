@@ -1,0 +1,3 @@
+{
+  "/api/properties/getproperty": "pages/api/properties/getproperty.js"
+}
