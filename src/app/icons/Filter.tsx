@@ -1,4 +1,4 @@
-import { icons } from "../types/components/icon";
+import { icons } from "../../types/components/icon";
 
 const Filter = (props: icons) => {
     const { fill = 'black', classname = '', stroke = 'currentColor' } = props

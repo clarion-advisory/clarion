@@ -3,7 +3,7 @@
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { slider } from '../types/components/slider';
+import { slider } from '../../types/components/slider';
 
 export default function SliderCenterMode(props: slider) {
     const {

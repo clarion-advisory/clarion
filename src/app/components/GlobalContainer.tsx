@@ -1,4 +1,4 @@
-import { compo } from "../types/components/globalComponent";
+import { compo } from "../../types/components/globalComponent";
 
 const GlobalContainer = (props: compo) => {
     const { children, className = '' } = props
