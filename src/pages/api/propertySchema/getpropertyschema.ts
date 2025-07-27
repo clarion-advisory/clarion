@@ -7,7 +7,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   try {
-    const [rows]: any = await db.execute("SELECT * FROM propertySchemas LIMIT 1");
+    const [rows]: any = await db.execute("SELECT * FROM propertyschemas LIMIT 1");
 
     if (!rows || rows.length === 0) {
       return res.status(404).json({ error: true, message: "No Data Found" });
@@ -29,7 +29,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     return res.status(200).json({
       error: false,
-      message: "Fetched propertySchemas",
+      message: "Fetched propertyschemas",
       propertySchema,
     });
   } catch (err) {

@@ -21,7 +21,7 @@ export const ContactProvider = ({ children }: { children: React.ReactNode }) => 
     // load contact info on first mount
     useEffect(() => {
         const fetchData = async () => {
-            const res = await fetch('/api/adminSettings/getContact')
+            const res = await fetch('/api/adminsettings/getContact')
             const data = await res.json()
             if (!data.error) setContactInfo(data.contactInfo);
         };

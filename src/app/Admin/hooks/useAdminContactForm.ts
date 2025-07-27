@@ -23,7 +23,7 @@ export const useAdminContactForm = () => {
     })
     useEffect(() => {
          const getContactDetails = async () => {
-        const res = await fetch('/api/adminSettings/getContact');
+        const res = await fetch('/api/adminsettings/getContact');
         const data = await res.json();
         // setContactInfo(data.contactInfo)
         setValues(data.contactInfo)

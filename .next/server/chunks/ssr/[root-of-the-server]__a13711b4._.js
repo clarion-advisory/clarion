@@ -89,7 +89,7 @@ const SiteInfoProvider = ({ children })=>{
     //set siteInfo on initial mount
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         const fetchSiteInfo = async ()=>{
-            const siteInfo = await fetch('/api/adminSettings/getgeneralsiteinfo');
+            const siteInfo = await fetch('/api/adminsettings/getgeneralsiteinfo');
             const data = await siteInfo.json();
             if (!data.error) setSiteInfo(data.siteInfo);
         };
@@ -1360,7 +1360,7 @@ const ContactProvider = ({ children })=>{
     // load contact info on first mount
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         const fetchData = async ()=>{
-            const res = await fetch('/api/adminSettings/getContact');
+            const res = await fetch('/api/adminsettings/getContact');
             const data = await res.json();
             if (!data.error) setContactInfo(data.contactInfo);
         };
@@ -1406,7 +1406,7 @@ const SocialProvider = ({ children })=>{
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         const fetchSocialLinks = async ()=>{
             try {
-                const res = await fetch("/api/adminSettings/getsociallinks");
+                const res = await fetch("/api/adminsettings/getsociallinks");
                 const data = await res.json();
                 console.log(data, "socialll");
                 if (!data.error) {

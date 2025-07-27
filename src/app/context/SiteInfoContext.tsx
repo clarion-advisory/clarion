@@ -20,7 +20,7 @@ export const SiteInfoProvider = ({ children }: { children: React.ReactNode }) =>
     //set siteInfo on initial mount
     useEffect(() => {
         const fetchSiteInfo = async () => {
-            const siteInfo = await fetch('/api/adminSettings/getgeneralsiteinfo')
+            const siteInfo = await fetch('/api/adminsettings/getgeneralsiteinfo')
             const data = await siteInfo.json()
             if (!data.error) setSiteInfo(data.siteInfo)
         }

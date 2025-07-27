@@ -22,7 +22,7 @@ export const SocialProvider = ({ children }: { children: React.ReactNode }) => {
     useEffect(() => {
         const fetchSocialLinks = async () => {
             try {
-                const res = await fetch("/api/adminSettings/getsociallinks");
+                const res = await fetch("/api/adminsettings/getsociallinks");
                 const data = await res.json();
                 console.log(data, "socialll");
 

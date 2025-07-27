@@ -7,7 +7,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   try {
-    const [rows]: any = await db.execute("SELECT socialLinks FROM adminSettings LIMIT 1");
+    const [rows]: any = await db.execute("SELECT socialLinks FROM adminsettings LIMIT 1");
 
     if (!rows || rows.length === 0) {
       return res.status(404).json({ error: true, message: "No Data Found" });

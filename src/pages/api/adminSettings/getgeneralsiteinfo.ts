@@ -5,7 +5,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (req.method !== 'GET') return res.status(405).json({ error: true, message: 'Method Not Allowed' })
 
     try {
-        const [row]: any = await db.execute('SELECT siteInfo FROM adminSettings LIMIT 1')
+        const [row]: any = await db.execute('SELECT siteInfo FROM adminsettings LIMIT 1')
 
         if (!row || row.lenght === 0) return res.status(404).json({ error: true, message: "No Data Found" })
 

@@ -51,7 +51,7 @@ async function handler(req, res) {
         });
     }
     try {
-        const [rows] = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$lib$2f$db$2e$ts__$5b$api$5d$__$28$ecmascript$29$__["db"].execute("SELECT * FROM propertySchemas LIMIT 1");
+        const [rows] = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$lib$2f$db$2e$ts__$5b$api$5d$__$28$ecmascript$29$__["db"].execute("SELECT * FROM propertyschemas LIMIT 1");
         if (!rows || rows.length === 0) {
             return res.status(404).json({
                 error: true,
@@ -72,7 +72,7 @@ async function handler(req, res) {
         };
         return res.status(200).json({
             error: false,
-            message: "Fetched propertySchemas",
+            message: "Fetched propertyschemas",
             propertySchema
         });
     } catch (err) {

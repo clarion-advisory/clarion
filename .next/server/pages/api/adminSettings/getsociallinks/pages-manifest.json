@@ -1,3 +1,3 @@
 {
-  "/api/adminSettings/getsociallinks": "pages/api/adminSettings/getsociallinks.js"
+  "/api/adminsettings/getsociallinks": "pages/api/adminsettings/getsociallinks.js"
 }

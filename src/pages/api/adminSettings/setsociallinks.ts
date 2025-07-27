@@ -14,7 +14,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   try {
     await db.execute(
-      "UPDATE adminSettings SET socialLinks = ? LIMIT 1",
+      "UPDATE adminsettings SET socialLinks = ? LIMIT 1",
       [JSON.stringify(socialLinks)]
     );
 

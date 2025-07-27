@@ -52,7 +52,7 @@ const AdminSettings = () => {
 
     //contact info handle
     const onContactSubmit = async (vals: typeof values) => {
-        const res = await fetch('/api/adminSettings/contact', {
+        const res = await fetch('/api/adminsettings/contact', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -72,7 +72,7 @@ const AdminSettings = () => {
         getContactDetails()
     }
     const getContactDetails = async () => {
-        const res = await fetch('/api/adminSettings/getContact');
+        const res = await fetch('/api/adminsettings/getContact');
         const data = await res.json();
         setContactInfo(data.contactInfo)
 
@@ -84,7 +84,7 @@ const AdminSettings = () => {
         formData.append('siteName', vals.siteName);
         if (vals.siteLogo) formData.append('siteLogo', vals.siteLogo);
 
-        const res = await fetch('/api/adminSettings/setgeneralsiteinfo', {
+        const res = await fetch('/api/adminsettings/setgeneralsiteinfo', {
             method: 'POST',
             body: formData, // 👈 Don't set Content-Type manually for FormData
         });
@@ -98,7 +98,7 @@ const AdminSettings = () => {
         getSiteInfo()
     }
     const getSiteInfo = async () => {
-        const res = await fetch('/api/adminSettings/getgeneralsiteinfo')
+        const res = await fetch('/api/adminsettings/getgeneralsiteinfo')
         const data = await res.json()
 
         if (!data.error) {
@@ -109,7 +109,7 @@ const AdminSettings = () => {
     //social links handle
     const onSocialSubmit = async (vals: typeof socialLinks) => {
         try {
-            const res = await fetch('/api/adminSettings/setsociallinks', {
+            const res = await fetch('/api/adminsettings/setsociallinks', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -138,7 +138,7 @@ const AdminSettings = () => {
         }
     };
     const getSocialLinks = async () => {
-        const res = await fetch('/api/adminSettings/getsociallinks')
+        const res = await fetch('/api/adminsettings/getsociallinks')
         const data = await res.json()
 
         if (!data.error) {

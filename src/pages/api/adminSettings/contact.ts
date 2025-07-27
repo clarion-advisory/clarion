@@ -15,7 +15,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   const result = await db.execute(
-   'UPDATE adminSettings SET contactInfo = ? LIMIT 1',  
+   'UPDATE adminsettings SET contactInfo = ? LIMIT 1',  
     [JSON.stringify(contactInfo)]
   );
 

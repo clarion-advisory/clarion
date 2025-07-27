@@ -72,7 +72,7 @@ const SiteInfoProvider = ({ children })=>{
         "SiteInfoProvider.useEffect": ()=>{
             const fetchSiteInfo = {
                 "SiteInfoProvider.useEffect.fetchSiteInfo": async ()=>{
-                    const siteInfo = await fetch('/api/adminSettings/getgeneralsiteinfo');
+                    const siteInfo = await fetch('/api/adminsettings/getgeneralsiteinfo');
                     const data = await siteInfo.json();
                     if (!data.error) setSiteInfo(data.siteInfo);
                 }
@@ -1438,7 +1438,7 @@ const ContactProvider = ({ children })=>{
         "ContactProvider.useEffect": ()=>{
             const fetchData = {
                 "ContactProvider.useEffect.fetchData": async ()=>{
-                    const res = await fetch('/api/adminSettings/getContact');
+                    const res = await fetch('/api/adminsettings/getContact');
                     const data = await res.json();
                     if (!data.error) setContactInfo(data.contactInfo);
                 }
@@ -1499,7 +1499,7 @@ const SocialProvider = ({ children })=>{
             const fetchSocialLinks = {
                 "SocialProvider.useEffect.fetchSocialLinks": async ()=>{
                     try {
-                        const res = await fetch("/api/adminSettings/getsociallinks");
+                        const res = await fetch("/api/adminsettings/getsociallinks");
                         const data = await res.json();
                         console.log(data, "socialll");
                         if (!data.error) {

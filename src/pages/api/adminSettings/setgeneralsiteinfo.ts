@@ -26,7 +26,7 @@ export default async function handler(req:NextApiRequest,res:NextApiResponse) {
         try{         
                 const uploadLogo = await cloudinary.uploader.upload(siteLogo?.filepath)
                 await db.execute(
-        'UPDATE adminSettings SET siteInfo = ? LIMIT 1',
+        'UPDATE adminsettings SET siteInfo = ? LIMIT 1',
         [JSON.stringify({ siteName, siteLogo: uploadLogo.secure_url })]
       );
 
