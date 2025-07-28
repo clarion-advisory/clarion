@@ -86,7 +86,7 @@ const AdminSettings = () => {
 
         const res = await fetch('/api/adminsettings/setgeneralsiteinfo', {
             method: 'POST',
-            body: formData, // 👈 Don't set Content-Type manually for FormData
+            body: formData,
         });
 
         const data = await res.json();
